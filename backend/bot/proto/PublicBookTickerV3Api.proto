@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package mexc;
+
+// Melhor bid/ask do book de um símbolo spot. Campos confirmados via
+// múltiplas fontes independentes (documentação oficial da MEXC mostrando
+// o payload já decodificado, e bibliotecas de terceiros com bindings
+// gerados a partir dos .proto oficiais).
+message PublicBookTickerV3Api {
+  string bidPrice = 1;
+  string bidQuantity = 2;
+  string askPrice = 3;
+  string askQuantity = 4;
+}
